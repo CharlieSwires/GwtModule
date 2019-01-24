@@ -1,0 +1,2 @@
+# Module com.charlie.gwtmodel.GwtModelJUnit.JUnit
+# RPC service class, partial path of RPC policy file

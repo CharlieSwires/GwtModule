@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui = 'urn:ui:com.google.gwt.uibinder'
+   xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'>
+
+   <gwt:HTMLPanel>
+    <div align = "center">
+   <gwt:PopupPanel ui:field="popup">
+   <gwt:VerticalPanel>
+   <gwt:Label>Add/Update</gwt:Label>
+    <gwt:Label>name : </gwt:Label><gwt:TextBox ui:field="name"></gwt:TextBox>
+    <gwt:Label>last name : </gwt:Label><gwt:TextBox ui:field="lastname"></gwt:TextBox>
+    <gwt:Label>password : </gwt:Label><gwt:TextBox ui:field="password"></gwt:TextBox>
+    <gwt:Label>email : </gwt:Label><gwt:TextBox ui:field="email"></gwt:TextBox>
+    <gwt:Label>nickname : </gwt:Label><gwt:TextBox ui:field="nickname"></gwt:TextBox>
+    <gwt:Label>country : </gwt:Label><gwt:TextBox ui:field="country"></gwt:TextBox>
+   <gwt:HorizontalPanel>
+   <gwt:Button ui:field="add2">Add</gwt:Button>
+   <gwt:Button ui:field="update2">Update</gwt:Button>
+   <gwt:Button ui:field="cancel">Cancel</gwt:Button>
+   </gwt:HorizontalPanel>
+   </gwt:VerticalPanel>
+   </gwt:PopupPanel>
+   </div>
+   </gwt:HTMLPanel>
+</ui:UiBinder> 
