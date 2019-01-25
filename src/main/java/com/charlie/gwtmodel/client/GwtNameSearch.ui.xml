@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui = 'urn:ui:com.google.gwt.uibinder'
+   xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'>
+
+   <gwt:HTMLPanel>
+    <div align = "center">
+   <gwt:PopupPanel ui:field="popup3">
+   <gwt:VerticalPanel ui:field="verticalp2">
+   <gwt:Label>Search by Name</gwt:Label>
+   <gwt:SuggestBox ui:field="suggest3"></gwt:SuggestBox>
+   <gwt:VerticalPanel>
+   <gwt:VerticalPanel ui:field="celltablenamesearch"></gwt:VerticalPanel>
+   <gwt:HorizontalPanel>
+   <gwt:Button ui:field="search4">Search</gwt:Button>
+   <gwt:Button ui:field="cancel4">Cancel</gwt:Button>
+   </gwt:HorizontalPanel>
+   </gwt:VerticalPanel>
+   </gwt:VerticalPanel>
+   </gwt:PopupPanel>
+   </div>
+   </gwt:HTMLPanel>
+</ui:UiBinder> 

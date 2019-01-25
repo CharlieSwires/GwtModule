@@ -6,7 +6,7 @@
     <div align = "center">
    <gwt:PopupPanel ui:field="popup2">
    <gwt:VerticalPanel ui:field="verticalp">
-   <gwt:Label>Search</gwt:Label>
+   <gwt:Label>Search by Country</gwt:Label>
    <gwt:SuggestBox ui:field="suggest2"></gwt:SuggestBox>
    <gwt:VerticalPanel>
    <gwt:VerticalPanel ui:field="celltable2"></gwt:VerticalPanel>

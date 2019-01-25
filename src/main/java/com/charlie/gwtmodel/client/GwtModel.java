@@ -24,7 +24,7 @@ public class GwtModel implements EntryPoint {
 	   public void onModuleLoad() {
 		   
 		      // Add the widgets to the root panel.
-		      RootPanel.get().add(new GwtModelFirst());
+		      RootPanel.get().add(new GwtTabPanel());
 
 	   }
 }

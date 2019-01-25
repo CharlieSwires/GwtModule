@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui = 'urn:ui:com.google.gwt.uibinder'
+   xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+   xmlns:subpanel='urn:import:com.charlie.gwtmodel.client'>
+
+   <gwt:HTMLPanel>
+   <div align = "center">
+   <gwt:TabPanel ui:field="gwtTabPanel">
+   <gwt:Tab text="Model"><subpanel:GwtModelFirst ui:field="gwtPanelModel"></subpanel:GwtModelFirst></gwt:Tab>
+   <gwt:Tab text="Competition"><subpanel:GwtCompetition ui:field="gwtPanelCompetition"></subpanel:GwtCompetition></gwt:Tab>
+   <gwt:Tab text="Search"><subpanel:GwtSearchPanel ui:field="gwtPanelSearch"></subpanel:GwtSearchPanel></gwt:Tab>
+   </gwt:TabPanel>
+   </div>
+   </gwt:HTMLPanel>
+</ui:UiBinder> 

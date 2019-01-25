@@ -51,6 +51,11 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 		JerseyClient jc = new JerseyClient();
 		return jc.getUsers();     
 	}
+	
+	public Users getUsersCompetition() {
+		JerseyClient jc = new JerseyClient();
+		return jc.getUsersCompetition();     
+	}
 	//post
 	public void createUsers(Users users) {
 		JerseyClient jc = new JerseyClient();
@@ -70,5 +75,18 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements Greetin
 	public Users getUsersByCountry(String country) {
 		JerseyClient jc = new JerseyClient();
 		return jc.getUsersByCountry(country);     
+	}
+	//get
+	public Users getUsersByName(String name) {
+		JerseyClient jc = new JerseyClient();
+		return jc.getUsersByName(name);     
+	}
+	public Users getUsersSearch() {
+		JerseyClient jc = new JerseyClient();
+		return jc.getUsersSearch();     
+	}
+	public Boolean sync() {
+		JerseyClient jc = new JerseyClient();
+		return jc.sync();
 	}
 }

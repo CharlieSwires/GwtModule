@@ -20,5 +20,13 @@ public interface GreetingServiceAsync {
 	//delete
 	void deleteUser(int id, AsyncCallback<Integer> callback) throws IllegalArgumentException;
 
-	void getUsersByCountry(String country, AsyncCallback callback) throws IllegalArgumentException;;
+	void getUsersByCountry(String country, AsyncCallback callback) throws IllegalArgumentException;
+
+	void getUsersCompetition(AsyncCallback callback) throws IllegalArgumentException;
+
+	void getUsersByName(String name, AsyncCallback callback) throws IllegalArgumentException;
+
+	void getUsersSearch(AsyncCallback callback) throws IllegalArgumentException;
+
+	void sync(AsyncCallback<Boolean> callback) throws IllegalArgumentException;
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui = 'urn:ui:com.google.gwt.uibinder'
+   xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'>
+
+   <gwt:HTMLPanel>
+    <div align = "center">
+   <gwt:HorizontalPanel>
+   <gwt:VerticalPanel ui:field="celltablesearch"></gwt:VerticalPanel>
+   <gwt:VerticalPanel>
+   <gwt:Button ui:field="refresh3">Refresh</gwt:Button>
+   <gwt:Button ui:field="search3">Search</gwt:Button>
+   <gwt:Button ui:field="synch">Synch</gwt:Button>
+   </gwt:VerticalPanel>
+   </gwt:HorizontalPanel>
+   </div>
+   </gwt:HTMLPanel>
+</ui:UiBinder> 

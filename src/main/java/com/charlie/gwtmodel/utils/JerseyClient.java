@@ -22,10 +22,10 @@ public class JerseyClient {
 	public Users getUsers() {
 		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
 		WebTarget webTarget = client.target("http://localhost:8080/Model").path("users");
-		 
+
 		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
 		Response response = invocationBuilder.get();
-		 
+
 		Users employees = response.readEntity(Users.class);
 		return employees;     
 	}
@@ -33,21 +33,21 @@ public class JerseyClient {
 	public void createUsers(Users users) {
 		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
 		WebTarget webTarget = client.target("http://localhost:8080/Model").path("users");
-		 
-		 
+
+
 		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
 		Response response = invocationBuilder.post(Entity.entity(users, MediaType.APPLICATION_JSON));
-		 	
+
 	}
 	//put
 	public User updateUser(int id, User user) {
 		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
 		WebTarget webTarget = client.target("http://localhost:8080/Model").path("users").path(""+id);
-		 
+
 		user.setId(id);		 
 		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
 		Response response = invocationBuilder.put(Entity.entity(user, MediaType.APPLICATION_JSON));
-		 
+
 		User employee = response.readEntity(User.class);
 		return employee;
 	}
@@ -55,7 +55,7 @@ public class JerseyClient {
 	public int deleteUser(int id) {
 		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class));
 		WebTarget webTarget = client.target("http://localhost:8080/Model").path("users").path(""+id);
-		 
+
 		Invocation.Builder invocationBuilder =  webTarget.request();
 		Response response = invocationBuilder.delete();
 		return response.getStatus();
@@ -63,11 +63,54 @@ public class JerseyClient {
 	public Users getUsersByCountry(String country) {
 		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
 		WebTarget webTarget = client.target("http://localhost:8080/Model").path("users/country").path(country);
-		 
+
 		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
 		Response response = invocationBuilder.get();
-		 
+
 		Users employees = response.readEntity(Users.class);
+		return employees;     
+	}
+	//get
+	public Users getUsersCompetition() {
+		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
+		WebTarget webTarget = client.target("http://localhost:8080/Competition").path("users");
+
+		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+
+		Users employees = response.readEntity(Users.class);
+		return employees;     
+	}
+	//get
+	public Users getUsersByName(String name){
+		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
+		WebTarget webTarget = client.target("http://localhost:8080/Search").path("users").path(name);
+
+		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+
+		Users employees = response.readEntity(Users.class);
+		return employees;     
+	}
+	//get
+	public Users getUsersSearch() {
+		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
+		WebTarget webTarget = client.target("http://localhost:8080/Search").path("users");
+
+		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+
+		Users employees = response.readEntity(Users.class);
+		return employees;     
+	}
+	public Boolean sync()  {
+		Client client = ClientBuilder.newClient( new ClientConfig().register(GensonJsonConverter.class) );
+		WebTarget webTarget = client.target("http://localhost:8080/Search").path("init");
+
+		Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
+		Response response = invocationBuilder.get();
+
+		Boolean employees = response.readEntity(Boolean.class);
 		return employees;     
 	}
 }
